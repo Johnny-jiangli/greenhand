@@ -22,10 +22,11 @@ function rolloverInit() {
 function setupRollover(thisImage) {
     thisImage.outImage = new Image();
     thisImage.outImage.src = thisImage.src;
+    //当鼠标离开图片对象时 显示原有的SRC
     thisImage.onmouseout = function() {
         this.src = this.outImage.src;//自定义outImage动态事件，在onmouseout发生时调用方法？？？？
     }
-
+//当鼠标离开图片时，显示以下图片
     thisImage.overImage = new Image();
     thisImage.overImage.src = "images/" + thisImage.id + "1.jpg";
     thisImage.onmouseover = function() {
