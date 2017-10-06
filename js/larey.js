@@ -26,10 +26,16 @@ function setupRollover(thisImage) {
     thisImage.onmouseout = function() {
         this.src = this.outImage.src;//自定义outImage动态事件，在onmouseout发生时调用方法？？？？
     }
-//当鼠标离开图片时，显示以下图片
+//当鼠标离开图片时，
     thisImage.overImage = new Image();
     thisImage.overImage.src = "images/" + thisImage.id + "1.jpg";
     thisImage.onmouseover = function() {
         this.src = this.overImage.src;
+    }
+//当鼠标点击图片时
+    thisImage.Mclick=new Image();
+    thisImage.Mclick.src="images/"+thisImage.id+"2.jpg";
+    thisImage.onclick=function () {
+        thisImage.src=thisImage.Mclick.src;
     }
 }
